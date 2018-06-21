@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './app.css';
+// import './app.css';
+import Card from './components/Card'
 
 export default class App extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export default class App extends Component {
     return (
       <div>
           <h1>Getting Started</h1>
+          <Card/>
       </div>
     );
   }
