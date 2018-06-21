@@ -25,19 +25,18 @@ export default class EmailForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const email = e.target.value;
-    const err = this.props.onSubmit(email)
-    this.setState(() => ( {err} ))
-
-    if(!err) {
-      e.target.elements.option.value = ''
-    }
+    const email = this.state.email;
+    alert(
+      "the email to submit is: " + email
+    )
+    console.log(email);
   }
+
+
   render() {
     return (
       <div className="row">
               <div className="input-field col s12">
-                {this.state.error && <h3>{this.state.error}</h3>}
                 <form onSubmit={this.handleSubmit}>
                   <input
                     id="email"
