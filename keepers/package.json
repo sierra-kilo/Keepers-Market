@@ -14,8 +14,18 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "file-loader": "^1.1.11",
+    "materialize-css": "^0.100.2",
+    "materialize-loader": "^2.0.3",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "url-loader": "^1.0.1",
+    "body-parser": "^1.18.3",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "react-router-dom": "^4.3.1",
+    "sequelize": "^4.37.10",
+    "sequelize-cli": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
