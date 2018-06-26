@@ -1,17 +1,18 @@
 {
-  "name": "simple-react-full-stack",
+  "name": "Keepers-Market",
   "version": "1.0.0",
-  "description": "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
+  "description": "keepers market newsletter sign up using react, express, axios, materialize-css",
   "main": "src/server/index.js",
   "scripts": {
     "start": "node src/server/index.js",
     "build": "webpack --mode production",
+    "heroku-postbuild": "cd client && yarn && yarn run build",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Sandeep Raveesh",
-  "license": "ISC",
+  "author": "Shant Kevorkian",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
