@@ -1,5 +1,6 @@
 import React from 'react'
 import Materialize from 'materialize-css'
+import axios from 'axios'
 // import Button from './Button'
 
 // function handleChange(e) {
@@ -26,10 +27,20 @@ export default class EmailForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const email = this.state.email;
-    alert(
-      "the email to submit is: " + email
-    )
-    console.log(email);
+
+    axios.post("/api/emails/", {
+      email
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    // alert(
+    //   "the email to submit is: " + email
+    // )
+    // console.log(email);
   }
 
 
