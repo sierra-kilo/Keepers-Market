@@ -6,11 +6,7 @@
   "scripts": {
     "start": "node src/server/index.js",
     "build": "webpack --mode production",
-<<<<<<< HEAD
-    "heroku-postbuild": "cd client && yarn && yarn run build",
-=======
     "heroku-postbuild": "cd src && yarn && yarn run build",
->>>>>>> 7312450976446da653eca470f18d460ce71f3636
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
