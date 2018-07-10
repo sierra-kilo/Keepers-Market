@@ -31,7 +31,7 @@ db.sequelize.sync().then(function() {
     console.log(err, "Something went wrong with the Database Update!")
 });
 
-// app.use(express.static('dist'));
+app.use(express.static('dist'));
 
 //routes
 require('./routes/api-routes.js')(app)
