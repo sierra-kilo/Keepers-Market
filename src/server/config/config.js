@@ -1,0 +1,26 @@
+require('dotenv').config();
+
+module.exports = {
+    development: {
+        username: process.env.LOCAL_DB_USER,
+        password: process.env.LOCAL_DB_PASS,
+        database: process.env.LOCAL_DB_DATABASE,
+        host: process.env.LOCAL_DB_HOST,
+        dialect: process.env.LOCAL_DB_DIALECT
+    },
+    test: {
+        username: process.env.DB_USER,
+        password: process.env.DB_PASS,
+        database: process.env.DB_DATABASE,
+        host: process.env.DB_HOST,
+        dialect: process.env.DB_DIALECT
+    },
+    production: {
+        // username: process.env.DB_USER,
+        // password: process.env.DB_PASS,
+        // database: process.env.DB_DATABASE,
+        // host: process.env.DB_HOST,
+        // dialect: process.env.DB_DIALECT
+        use_env_variable: DATABASE_URL
+    }
+};
