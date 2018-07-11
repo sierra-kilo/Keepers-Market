@@ -48,7 +48,10 @@ export default class EmailForm extends React.Component {
     return (
       <div className="row">
               <div className="input-field col s12">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={() => {
+                  this.handleSubmit
+                  props.history.push('/')
+                }}>
                   <input
                     id="email"
                     type="email"
