@@ -1,18 +1,11 @@
-// const express = require('express');
-//
-// const app = express();
-//
-// // here from boilerplate, dont know what its for.
-// app.use(express.static('dist'));
-//
-// app.listen(8080, () => console.log('Listening on port 8080!'));
-
-
 const express = require('express');
+require('dotenv').config()
 const bodyParser = require('body-parser')
 let PORT = process.env.PORT || 8080;
 
 const app = express();
+
+app.use(express.static('dist'));
 
 //Models
 const db = require("./models");
@@ -30,7 +23,7 @@ db.sequelize.sync().then(function() {
     console.log(err, "Something went wrong with the Database Update!")
 });
 
-// app.use(express.static('dist'));
+
 
 //routes
 require('./routes/api-routes.js')(app)
