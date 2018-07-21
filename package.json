@@ -25,6 +25,7 @@
     "mysql2": "^1.5.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "sequelize": "^4.37.10",
     "sequelize-cli": "^4.0.0",
