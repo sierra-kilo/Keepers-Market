@@ -11,7 +11,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-          <h1>Getting Started</h1>
+          <h1>Keepers Market</h1>
           <Card/>
       </div>
     );
